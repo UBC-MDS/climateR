@@ -1,6 +1,6 @@
 #' getpastinfo: Minimum, maximum temperatures, average wind speed, and average humidity for a given date of a particular city
 #'
-#' @importFrom httr
+#' @import httr
 #'
 #' @param city_name string value
 #'
