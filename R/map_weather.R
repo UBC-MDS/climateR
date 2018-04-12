@@ -8,7 +8,7 @@ library(ggmap)
 #Wrapper function
 get_weather <- function(cities,continent){
   
-  # Computes the minimum, maximum temperature, wind direction & speed forecast for next 5 days
+  # Plots weather state for current date.
   # Input: cities: vector of cities (same continent)
   # Input: continent: (String )continent corresponding to city_name
   

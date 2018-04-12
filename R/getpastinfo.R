@@ -1,6 +1,6 @@
-#' get_past_info: Minimum, maximum temperatures, average wind speed, and average humidity for a given date of a particular city
+#' getpastinfo: Minimum, maximum temperatures, average wind speed, and average humidity for a given date of a particular city
 #'
-#' @importFrom httr
+#' @import httr
 #'
 #' @param city_name string value
 #'
@@ -11,12 +11,12 @@
 #' @export
 #'
 #' @examples
-#' get_past_info("London","2013/4/27/")
+#' getpastinfo("London","2013/4/27/")
 #'
 #'
 
 
-get_past_info <- function(city_name ="London", date = "2013/4/27/"){
+getpastinfo <- function(city_name ="London", date = "2013/4/27/"){
   # Computes minimum, maximum temperatures, average wind speed, and average humidity for a given date of a particular city
   # Input: city_name: (String) name of a city
   # Input: data: (String) request date
@@ -59,5 +59,3 @@ get_past_info <- function(city_name ="London", date = "2013/4/27/"){
   return(list(min_temp = realized_min_temp,max_temp =realized_max_temp, windspeed = avg_wind_speed, humidity =avg_humidity))
 
 }
-
-
