@@ -4,7 +4,7 @@ city <- "Istanbul"
 correct_output <- suntime(city)
 
 test_that("Inputs are correct", {
-  expect_error(typeof(city), 'string') # type of a city input must be a string
+  expect_equal(typeof(city), 'character') # type of a city input must be a string
   expect_error(suntime(city = 5))
 })
 

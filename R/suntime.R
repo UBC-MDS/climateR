@@ -14,7 +14,7 @@
 #' @export
 #'
 #' @examples
-#' get_suntime("London")
+#' suntime("London")
 
 suntime <- function(city){
 
