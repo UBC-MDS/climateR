@@ -20,45 +20,61 @@ library(ggmap)
 ```{r}
 
 #Wrapper function
-get_weather <- function(city_name,continent){
+get_weather <- function(cities,continent){
   
   # Computes the minimum, maximum temperature, wind direction & speed forecast for next 5 days
   # Input: city_name: (String)name of a city
   # Input: continent: (String )continent corresponding to city_name
   
-  #Error handling
-  if (!is.character(city_name))
-        stop("Need to input an string.")
-  if (!is.character(continent))
-        stop("Need to input an string.")
-  if (!(continent %in% c("Asia","Africa","Australasia","Europe","North America","South America")))
-        stop("Continent can only be one of Asia, Africa, Australasia, Europe, North America, South America ")
+  # #Error handling
+  # if (!is.character(city_name))
+  #       stop("Need to input an string.")
+  # if (!is.character(continent))
+  #       stop("Need to input an string.")
+  # if (!(continent %in% c("Asia","Africa","Australasia","Europe","North America","South America")))
+  #       stop("Continent can only be one of Asia, Africa, Australasia, Europe, North America, South America ")
   
   #Base query
   query_base <- "https://www.metaweather.com/api/"
   
+  search_location=c()
+  woeid = c()
+  lat_long = c()
+  coord = c()
+  lat = c()
+  long =c()
+  
   #Retrieve where on earth id  and coordinates of city through API
-  search_location <- content(GET(paste0(query_base,"location/search/?query=",city_name)))
-  woeid <- search_location[[1]]$woeid
-  lat_long <- search_location[[1]]$latt_long
+  for (i in 1:length(cities)){
+    print(cities[i])
+    search_location[i] <- content(GET(paste0(query_base,"location/search/?query=",cities[i])))
+    woeid[i] <- search_location[[i]]$woeid
+    lat_long[i] <- search_location[[i]]$latt_long
+    coord[i] <- str_split(lat_long[i],",")
+    lat[i] <- as.numeric(coord[i][[1]][1])
+    lon[i] <- as.numeric(coord[i][[1]][2])
+  }
+
+}
+  
+  
+  
+ 
+  #df <- as.data.frame(cbind(lon,lat))
   
   #Plot location of city on Map
   
   #Get map to use as base map
-  map <- get_map(location = continent, zoom = 3)
-  coord <- str_split(lat_long,",")
-  lat <- as.numeric(coord[[1]][1])
-  lon <- as.numeric(coord[[1]][2])
-  df <- as.data.frame(cbind(lon,lat))
-  loc_map <- ggmap(map)+
-    geom_point(data = df, aes(x = lon, y = lat), size = 3,fill="red", shape = 21)  
-  print(loc_map)
-  search_temp <- content(GET(paste0(query_base,"location/",woeid,"/")))
+  #map <- get_map(location = continent, zoom = 3)
   
-}
+  #loc_map <- ggmap(map)+
+    #geom_point(data = df, aes(x = lon, y = lat), size = 3,fill="red", shape = 21)  
+  #print(loc_map)
+  #search_temp <- content(GET(paste0(query_base,"location/",woeid,"/")))
+
 
 #Test examples
-response <- get_weather("oslo","Europe")
+response <- get_weather(c("oslo","london"),"Europe")
 #response <- get_weather("mumbai","Asia")
 #response <- get_weather("denver","North America")
 ```
