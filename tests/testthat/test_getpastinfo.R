@@ -1,4 +1,4 @@
-# test_get_past_info.R
+# test_getpastinfo.R
 # April 2018
 #
 # This script tests the function from get_past_info.R.
@@ -7,7 +7,7 @@
 
 ## Computes the minimum, maximum temperature, average wind speed, average humidity for a given past date
 
-context("Testing get_past_info()")
+context("Testing getpastinfo")
 
 my_city <- "Istanbul"
 past_day <- "2017/8/30/"

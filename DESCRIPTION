@@ -2,10 +2,10 @@ Package: climateR
 Title: API wrapper for weather data
 Version: 0.0.0.9000
 Authors@R: c(
-      person("Tarini", "Bhatnagar", email = "tarini.bhatnagar@gmail.com", role = c("aut", "cre")),
+      person("Tarini", "Bhatnagar", email = "tarini.bhatnagar@gmail.com", role = c("aut")),
       person("Akshi", "Chaudhary", email = "chaudhary.akshi@gmail.com", role = c("aut","cre")),
-      person("Nazli", "Ozum", email = "nazliozum@gmail.com", role = c("aut","cre")),
-      person("Cem", "Sinan", email = "cemsinanozturk@gmail.com", role = c("aut","cre"))
+      person("Nazli", "Ozum", email = "nazliozum@gmail.com", role = c("aut")),
+      person("Cem", "Sinan", email = "cemsinanozturk@gmail.com", role = c("aut"))
       )
 Description: API warpper of "Meta Weather API", "https://www.metaweather.com/api/",  to access weather data of different cities wordlwide. ClimateR retrives information about 5 day's worth prediction of minimum temperature, maximum temperature
 Depends: R (>= 3.4.3)
@@ -18,5 +18,5 @@ Suggests:
     rmarkdown
 RoxygenNote: 6.0.1
 VignetteBuilder: knitr
-Imports: httr, lubridate, stringr, ggmap, ggplot2, installR
+Imports: httr, lubridate, stringr, ggmap, ggplot2
 URL: https://github.com/UBC-MDS/climateR

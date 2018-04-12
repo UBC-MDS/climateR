@@ -1,6 +1,10 @@
 #' suntime: Sunrise and sunset time of a particular city
 #'
-#' @importFrom httr, lubridate, stringr
+#' @import httr
+#'
+#' @import lubridate
+#'
+#' @import stringr
 #'
 #' @param city string value
 #'
