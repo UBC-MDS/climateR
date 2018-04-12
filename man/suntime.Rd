@@ -16,5 +16,5 @@ list of sunrise and sunset time in the given city
 suntime: Sunrise and sunset time of a particular city
 }
 \examples{
-get_suntime("London")
+suntime("London")
 }
