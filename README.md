@@ -2,6 +2,7 @@
 
 
 [![Build Status](https://travis-ci.org/UBC-MDS/climateR.svg?branch=master)](https://travis-ci.org/UBC-MDS/climateR)
+[![codecov](https://codecov.io/gh/UBC-MDS/climateR/branch/master/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/climateR)
 
 ## Contributors
 
