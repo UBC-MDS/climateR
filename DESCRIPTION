@@ -1,7 +1,7 @@
 Package: climateR
 Title: API wrapper for weather data
 Version: 0.0.0.9000
-Authors@R: c(
+Authors: c(
       person("Tarini", "Bhatnagar", email = "tarini.bhatnagar@gmail.com", role = c("aut")),
       person("Akshi", "Chaudhary", email = "chaudhary.akshi@gmail.com", role = c("aut","cre")),
       person("Nazli", "Ozum", email = "nazliozum@gmail.com", role = c("aut")),
