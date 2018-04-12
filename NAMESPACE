@@ -3,6 +3,6 @@
 export(suntime)
 export(get_past_info)
 
-import(hhtr)
+import(httr)
 import(lubridate)
 import(stringr)
