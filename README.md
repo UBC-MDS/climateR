@@ -1,9 +1,10 @@
-# climateR: 
+# climateR :cloud: :sunny: :snowflake:
 R wrapper for [MetaWeather API](https://www.metaweather.com/api/)
-
 
 [![Build Status](https://travis-ci.org/UBC-MDS/climateR.svg?branch=master)](https://travis-ci.org/UBC-MDS/climateR)
 [![codecov](https://codecov.io/gh/UBC-MDS/climateR/branch/master/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/climateR)
+
+<img src="img/logo.PNG" align="right" border="none" width="250" height="250"/>
 
 ## Contributors
 
@@ -18,7 +19,7 @@ R wrapper for [MetaWeather API](https://www.metaweather.com/api/)
 
 ## About
 
-climateR offers 3 functions that enable the user to call for data from the [MetaWeather API](https://www.metaweather.com/api/):
+climateR is a R API wrapper which offers offers 3 functions that enable the user to call for data from the [MetaWeather API](https://www.metaweather.com/api/):
 
 - `get_weather(cities, continent)`: Maps the weather state of given cities (all from same continent) on the current date.
 
@@ -96,6 +97,14 @@ $humidity
 
 [MIT License](LICENSE.md)
 
+## Future Developments
+
+The `climateR` wrapper will be improved in the future to include weather icons and cities from different parts of the world and not just from one continent.
+
 ## Contributing
+
+This is an open source project. Please follow the guidelines below for contribution.
+  - Open an issue for any feedback and suggestions.
+  - For contributing to the project, please refer to [Contributing](CONTRIBUTING.md) for details.
 
 This is an open source project. So feedback, suggestions and contributions are very welcome. For feedback and suggestions, please open an issue in this repo. If you are willing to contribute this package, please refer to [Contributing](CONTRIBUTING.md) guidelines for details.
