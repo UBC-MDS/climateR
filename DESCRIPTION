@@ -8,8 +8,8 @@ Authors@R: c(
       person("Cem", "Sinan", email = "cemsinanozturk@gmail.com", role = c("aut"))
       )
 Description: API warpper of "Meta Weather API", "https://www.metaweather.com/api/",  to access weather data of different cities wordlwide. ClimateR retrives information about 5 day's worth prediction of minimum temperature, maximum temperature
-Depends: R (>= 3.4.3)
-License: MIT + file LICENSE
+Depends: R (>= 3.4.1)
+License: MIT LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests:
