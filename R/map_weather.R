@@ -1,9 +1,23 @@
-library(httr)
-library(installr)
-library(stringr)
-library(ggplot2)
-library(ggmap)
-
+#' getpastinfo: Minimum, maximum temperatures, average wind speed, and average humidity for a given date of a particular city
+#'
+#' @import httr
+#' @import installr
+#' @import stringr
+#' @import ggplot2
+#' @import ggmap
+#'
+#' @param cities string value
+#'
+#' @param continent string value
+#'
+#' @return map
+#'
+#' @export
+#'
+#' @examples
+#' get_weather("London","Europe")
+#'
+#'
 
 #Wrapper function
 get_weather <- function(cities,continent){

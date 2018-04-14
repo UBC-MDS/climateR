@@ -15,8 +15,9 @@ LazyData: true
 Suggests:
     testthat,
     knitr,
-    rmarkdown
+    rmarkdown,
+    installr
 RoxygenNote: 6.0.1
 VignetteBuilder: knitr
-Imports: httr, lubridate, stringr, ggmap, ggplot2
+Imports: httr, lubridate, stringr, ggmap, ggplot2, installr
 URL: https://github.com/UBC-MDS/climateR
