@@ -53,7 +53,7 @@ get_weather(cities = c("Vancouver", "Seattle", "Boston"), continent = "North Ame
 ```
 # Get sunrise, sunset, and total day time for Instanbul today
 
-suntime("Instanbul")
+suntime("Istanbul")
 
 Output:
 $sunrise
