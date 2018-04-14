@@ -3,7 +3,6 @@ title: "climateR"
 author: "Cem Sinan, Nazli Ozum, Tarini Bhatnagar, Akshi Chaudhary"
 date: "`r Sys.Date()`"
 output: 
-    rmarkdown::html_vignette : default
     github_document : default
 vignette: >
   %\VignetteIndexEntry{Vignette Title}
