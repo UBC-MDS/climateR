@@ -46,6 +46,8 @@ get_weather <- function(cities,continent){
   search_temp =c()
   ws_name =c()
   city_name =c()
+  min_t = c()
+  max_t = c()
 
   #Retrieve where on earth id  and coordinates of city through API
   for (i in 1:length(cities)){
@@ -59,15 +61,22 @@ get_weather <- function(cities,continent){
 
     search_temp <- content(GET(paste0(query_base,"location/",woeid[i],"/")))
     ws_name[i] <- search_temp[[1]][[1]]$weather_state_name
+    min_t[i] <- round(search_temp[[1]][[1]]$min_temp)
+    max_t[i] <- round(search_temp[[1]][[1]]$max_temp)
     city_name[i] <- cities[i]
-    df <- as.data.frame(cbind(city_name,lon,lat,ws_name))
+    df <- as.data.frame(cbind(city_name,lon,lat,ws_name, min_t, max_t))
   }
   #Plot location of city on Map
   #Get map to use as base map
   map <- get_map(location = continent, zoom = 3)
   loc_map <- ggmap(map)+
-    geom_point(data = df, aes(x = as.numeric(as.character(lon)), y = as.numeric(as.character(lat)),color=ws_name), size = 3, shape = 17) +
-    geom_text(data = df, aes(x = as.numeric(as.character(lon)), y = as.numeric(as.character(lat)), label=city_name,vjust = 0.05, hjust = -0.1),fontface="bold",size=3)+
+    geom_point(data = df, aes(x = as.numeric(as.character(lon)),
+                              y = as.numeric(as.character(lat)),
+                              color=ws_name), size = 3, shape = 17) +
+    geom_text(data = df, aes(x = as.numeric(as.character(lon)),
+                             y = as.numeric(as.character(lat)),
+                             label= paste0(city_name," ", min_t,"/",max_t, " C"),
+                             vjust = 0.05, hjust = -0.1),fontface="bold",size=3)+
     scale_color_brewer("Weather state",palette = "Dark2")
   return(loc_map)
 }
