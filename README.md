@@ -1,5 +1,7 @@
-# climateR: 
+# climateR :cloud: :sunny:
 R wrapper for [MetaWeather API](https://www.metaweather.com/api/)
+
+![logo](img/logo.PNG)
 
 
 [![Build Status](https://travis-ci.org/UBC-MDS/climateR.svg?branch=master)](https://travis-ci.org/UBC-MDS/climateR)
