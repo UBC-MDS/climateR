@@ -1,7 +1,6 @@
 #' getpastinfo: Minimum, maximum temperatures, average wind speed, and average humidity for a given date of a particular city
 #'
 #' @import httr
-#' @import installr
 #' @import stringr
 #' @import ggplot2
 #' @import ggmap
